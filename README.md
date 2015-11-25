@@ -1,5 +1,4 @@
 #ceph-influxDB-metricsCollector
-By Ignacy Debicki
 
 ######This is a script to collect data about ceph and send it to influxDB >= v0.9.x
 
@@ -9,12 +8,12 @@ By Ignacy Debicki
 
 
 To run it has the following dependencies:
-
-* [influxdb-python](https://github.com/influxdb/influxdb-python)
-  * [Requests](http://docs.python-requests.org/)
+influxdb-python
+pip install influxdb
 
 Optional libraries for 2.6.x to speed up JSON processing:
-* [simplejson](https://github.com/simplejson/simplejson)
+simplejson
+pip install simplejson
 
 Also please ensure python has these libraries:
 

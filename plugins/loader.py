@@ -26,7 +26,7 @@ def parseArgs():
 	-c and --config
 	'''
 	confPath = expectedConf
-	interval = 60
+	interval = 10
 	versionInfo = sys.version_info
 	if versionInfo[0] <= 6 and versionInfo[0] == 2:
 		#if version is 2.6.x use optparse
@@ -50,9 +50,9 @@ def parseArgs():
 		confPath = expectedConf
 	try:
 		if not (options['interval'] == '' or options['interval'] == None):
-			interval = int(options['interval'])*60
+			interval = int(options['interval'])*1
 	except:
-		interval=60
+		interval=10
 
 	return confPath, interval
 
@@ -291,8 +291,7 @@ def main(configFile=defaultConf):
 				headers={
 					'Content-type': 'application/octet-stream',
 					'Content-encoding':'gzip',
-					'Accept': 'gzip,text/plain',
-					'Transfer-Encoding':'application/gzip'
+					'Accept': 'gzip,text/plain'
 				})
 			
 			#Close string buffer

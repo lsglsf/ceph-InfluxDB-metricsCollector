@@ -5,7 +5,7 @@ from datetime import datetime
 i=0
 confFile,interval=loader.parseArgs()
 while True:
-	while datetime.now().second==0:
+	while datetime.now().second%10==0:
 		i+= 1
 		print i
 		t =time.time()
