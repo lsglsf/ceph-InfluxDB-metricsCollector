@@ -1,4 +1,6 @@
 #ceph-influxDB-metricsCollector
+add support python 2.7 and support 10s interval
+
 
 ######This is a script to collect data about ceph and send it to influxDB >= v0.9.x
 
